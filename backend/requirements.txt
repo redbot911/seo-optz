@@ -1,7 +1,2 @@
-fastapi
-uvicorn
-aiohttp
-beautifulsoup4
-httpx
-passlib[bcrypt]
-python-multipart
+bcrypt==4.3.0
+passlib==1.7.4
