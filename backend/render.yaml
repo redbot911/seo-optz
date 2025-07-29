@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: seo-backend
+    name: seo-fastapi-backend
     env: python
-    buildCommand: ""
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
-    plan: free
-
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn app.main:app --host=0.0.0.0 --port=8000"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
